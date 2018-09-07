@@ -50,6 +50,14 @@
 
 		
 
+		$('.arrow-down-icon').click(function(){ 
+		    $("html, body").animate({ 
+		      scrollTop: $('.resi-section-1-wrap').offset().top 
+		    }, "slow"); 
+		  })
+
+		
+
 		// $(".main").onepage_scroll({
 		// 	sectionContainer: ".section",     // sectionContainer accepts any kind of selector in case you don't want to use section
 		// 	easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
@@ -84,12 +92,25 @@
 		// 	maxGlare:       1       // From 0 - 1.
 		// })
 		if($('body').hasClass('residential-page')){
+
+			$('.rcb1').click(function(){
+				var text = $(this).text();
+				$('.resi-contact-form #txtBackground').text('');
+				$('.resi-contact-form #txtBackground').text(text);
+			})
+
+			$('.rcb2').click(function(){
+				var text = $(this).text();
+				$('.resi-contact-form #txtBackground').text('');
+				$('.resi-contact-form #txtBackground').text(text);
+			})
+
 			$.scrollify({
 				section : ".section",
 				// sectionName : "section-name",
-				interstitialSection : "",
+				interstitialSection : "footer",
 				easing: "easeOutExpo",
-				scrollSpeed: 1500,
+				scrollSpeed: 800,
 				offset : 0,
 				scrollbars: true,
 				standardScrollElements: "",
@@ -97,7 +118,7 @@
 				overflowScroll: true,
 				updateHash: true,
 				touchScroll:true,
-				before:function() {
+				before:function(i,panels) {
 					$('body').find('.active-section').removeClass('active-section');
 					$.scrollify.current().addClass('active-section');
 					setTimeout(function(){
@@ -133,13 +154,47 @@
 						$('.infographics-border').css({'opacity':'0'});
 					}
 
+					var ref = panels[i].attr("data-section-name");
+
+				      $(".resi-pagination .active").removeClass("active");
+
+				      $(".resi-pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+
 				},
 				after:function() {
 					
 				},
 				afterResize:function() {},
-				afterRender:function() {}
+				afterRender:function() {
+				var pagination = "<ul class=\"resi-pagination\">";
+			    var activeClass = "";
+			    $(".section").each(function(i) {
+			        activeClass = "";
+			        if(i===0) {
+			          activeClass = "active";
+			        }
+			        pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+			    });
+
+			    pagination += "</ul>";
+
+			    $(".main").append(pagination);
+			      /*
+
+			      Tip: The two click events below are the same:
+
+			      $(".pagination a").on("click",function() {
+			        $.scrollify.move($(this).attr("href"));
+			      });
+
+			      */
+			    $(".resi-pagination a").on("click",$.scrollify.move);
+
+				}
 			});
+
+
+
 		}
 
 		if($('body').hasClass('property-page')){
