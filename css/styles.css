@@ -377,7 +377,7 @@ body{
 
 	.slideshow-content{
 		position: absolute;
-		left: 0;
+		/*left: 0;*/
 		top: 36%;
 		width: 100%;
 	}
@@ -435,19 +435,15 @@ body{
 	color: #2a2a2a;
 }
 
-	.services-wrap::before{
-		/* content: ''; */
+	/*.services-wrap::before{
+		content: '';
 		position: absolute;
 		left: 0;
-		bottom: 0;
+		top: 0;
 		width: 100%;
 		height: 100%;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
-		background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-	}
+		background: rgba(0,0,0,0.4);
+	}*/
 
 	.services-wrap::after{
 		/* content: ''; */
@@ -470,7 +466,7 @@ body{
 
 	.services-label {
 		text-transform: uppercase;
-		color: #2a2a2a;
+		color: #23221f;
 		line-height: 1;
 		position: relative;
 		padding-bottom: 50px;
@@ -1073,7 +1069,7 @@ INNER PAGES
 	.resi-label{
 		position: relative;
 		z-index: 100;
-		
+
 	}
 
 	.resi-label h1{
@@ -1321,10 +1317,17 @@ INNER PAGES
 
 	.section-text-bg.section-text-bg-2{
 		background: rgba(75, 55, 57, 0.6);
+		margin-left: auto;
 	}
 
 	.section-text-bg.section-text-bg-3{
 		background: rgba(92, 85, 79, 0.6);
+	}
+
+	.section-text-bg.section-text-bg-2 .resi-cta-bg{
+		margin-left: 0;
+		margin-right: 7%;
+		right: 0;
 	}
 
 
