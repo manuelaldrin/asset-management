@@ -1058,6 +1058,7 @@ INNER PAGES
 		background: #abc8ce;
 		text-align: center;
 		padding-top:  345px;
+		overflow: hidden;
 	}
 
 	.resi-logo{
@@ -1065,6 +1066,14 @@ INNER PAGES
 		width: 100%;
 		display: block;
 		margin: 0 auto;
+		position: relative;
+		z-index: 100;
+	}
+
+	.resi-label{
+		position: relative;
+		z-index: 100;
+		
 	}
 
 	.resi-label h1{
@@ -1072,15 +1081,16 @@ INNER PAGES
 		line-height: 1;
 		text-transform: uppercase;
 		font-family: 'Italiana', serif;
-		color: #5e5e5e;
+		color: #fff;
 		font-size: 43px;
 		letter-spacing: 1px;
+		text-shadow: 1px 1px 0px #000;
 	}
 
 	.resi-label span{
 		display: block;
 		font-family: 'Montserrat', sans-serif;
-		color: #484848;
+		color: #fff;
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 11px;
@@ -1091,11 +1101,12 @@ INNER PAGES
 		height: 40px;
 		width: 40px;
 		border-radius: 50%;
-		border: 1px solid #5e5e5e;
+		border: 1px solid #fff;
 		display: block;
 		margin: auto;
 		position: relative;
 		cursor: pointer;
+		z-index: 100;
 	}
 
 	.arrow-down-icon::before{
@@ -1105,7 +1116,7 @@ INNER PAGES
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: url(../images/down-arrow.png) no-repeat center / contain;
+		background: url(../images/down-arrow-white.png) no-repeat center / contain;
 		transform: scale(0.6);
 		transform-origin: center;
 		opacity: 0.6;
@@ -1116,6 +1127,7 @@ INNER PAGES
 		width: 100%;
 		margin: 33px auto 0;
 		position: relative;
+		z-index: 100;
 	}
 
 	.resi-down-arrow::before{
@@ -1125,7 +1137,7 @@ INNER PAGES
 		top: 50%;
 		width: 30%;
 		height: 1px;
-		background: #949494;
+		background: #fff;
 	}
 
 	.resi-down-arrow::after{
@@ -1135,7 +1147,7 @@ INNER PAGES
 		top: 50%;
 		width: 30%;
 		height: 1px;
-		background: #949494;
+		background: #fff;
 	}
 
 	.section{
@@ -1158,6 +1170,7 @@ INNER PAGES
 		font-size: 20px;
 		text-align: right;
 		margin-left: auto;
+		text-shadow: 1px 1px 0 #000;
 	}
 
 	.resi-section-1-text p{
@@ -1498,7 +1511,7 @@ INNER PAGES
 	}
 
 	/*Resi Scroll Down*/
-	.scroll-wrap{
+	.scroll-down-wrap{
 		position: fixed;
 		right: 10px;
 		bottom: 20%;
@@ -1517,11 +1530,11 @@ INNER PAGES
         100% {transform: translateY(40px);}
     }
 
-	.scroll-main{
+	.scroll-down-main{
 		position: relative;
 	}
 
-	.scroll-main::before{
+	.scroll-down-main::before{
 		content: '';
 		height: 60px;
 		width: 1px;
@@ -1533,7 +1546,7 @@ INNER PAGES
 		position: absolute;
 	}
 
-	.scroll-main::after{
+	.scroll-down-main::after{
 		content: '';
 		height: 20px;
 		width: 20px;
@@ -1545,7 +1558,7 @@ INNER PAGES
 		position: absolute;
 	}
 
-	.scroll-main span{
+	.scroll-down-main span{
 		display: block;
 		font-family: 'Italiana', serif;
 		font-size: 13px;
@@ -1553,6 +1566,52 @@ INNER PAGES
 		text-align: center;
 		cursor: pointer;
 		line-height: 1;
+	}
+
+	/*Scroll up arrow*/
+	.scroll-up-wrap{
+		display: none;
+		position: fixed;
+		right: 10px;
+		bottom: 10%;
+		z-index: 2000;
+		-webkit-animation: ScrollDown 1s linear infinite alternate;
+    	animation: ScrollDown 1s linear infinite alternate;
+	}
+
+	.scroll-up-main span{
+		display: block;
+		font-family: 'Italiana', serif;
+		font-size: 13px;
+		text-transform: uppercase;
+		text-align: center;
+		cursor: pointer;
+		line-height: 1;
+	}
+
+	.scroll-up-main::before{
+		content: '';
+		height: 60px;
+		width: 1px;
+		background: #5e5e5e;
+		left: 0;
+		right: 0;
+		bottom: -75px;
+		margin: auto;
+		position: absolute;
+	}
+
+	.scroll-up-main::after{
+		content: '';
+		height: 20px;
+		width: 20px;
+		background: url(../images/down-arrow.png) no-repeat center / contain;
+		left: 0;
+		right: 0;
+		top: -25px;
+		margin: auto;
+		position: absolute;
+		transform: rotateX(180deg);
 	}
 
 
@@ -1584,6 +1643,41 @@ INNER PAGES
 
 	.resi-pagination li a.active{
 		background: #fff;
+	}
+
+	.video-main{
+		position: absolute;
+	    z-index: 1;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+
+	.video-main::before {
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    background: rgba(165, 194, 203, 0.8);
+	    z-index: 2;
+	}
+
+	.video-main video {
+	    width: 100% !important;
+	    height: 100% !important;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    object-fit: cover;
+	    z-index: 1;
+	    opacity: 0;
+	    transform: scale(1.2);
+	    -webkit-transform: scale(1.2);
+	    -moz-transform: scale(1.2);
+	    -o-transform: scale(1.2);
 	}
 
 
