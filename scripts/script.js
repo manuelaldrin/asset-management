@@ -34,7 +34,7 @@
 			  autoplay: true, 
 			  fade: true,
 			  autoplaySpeed: 1500, 
-			  dots: true,
+			  dots: false,
 			  cssEase: 'linear',
 			  speed: 1500
 			});
@@ -54,7 +54,13 @@
 		    $("html, body").animate({ 
 		      scrollTop: $('.resi-section-1-wrap').offset().top 
 		    }, "slow"); 
-		  })
+		})
+
+		$('.slideshow-btn a').click(function(){ 
+		    $("html, body").animate({ 
+		      scrollTop: $('.cta-wrap').offset().top 
+		    }, "slow"); 
+		})
 
 		
 
