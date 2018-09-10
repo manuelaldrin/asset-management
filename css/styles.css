@@ -1491,11 +1491,12 @@ INNER PAGES
 	}
 
 	.resi-contact-form{
-		max-width: 360px;
-		width: 100%;
-		position: relative;
-		display: block;
-		margin: 100px 0;
+		max-width: 880px;
+	    width: 100%;
+	    position: relative;
+	    display: block;
+	    margin: 100px 0;
+	    font-size: 0;
 	}
 
 	.resi-contact-form input,
@@ -1511,7 +1512,7 @@ INNER PAGES
 
 	.resi-contact-form textarea{
 		resize: none;
-		height: 150px;
+		height: 106px;
 	}
 
 	.resi-contact-form dl{
