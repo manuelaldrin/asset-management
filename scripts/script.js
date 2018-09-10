@@ -58,7 +58,7 @@
 
 		$('.slideshow-btn a').click(function(){ 
 		    $("html, body").animate({ 
-		      scrollTop: $('.cta-wrap').offset().top 
+		      scrollTop: $('.cta-wrap').offset().top - 150
 		    }, "slow"); 
 		})
 
