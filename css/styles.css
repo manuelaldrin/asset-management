@@ -863,7 +863,7 @@ body{
 		-moz-transition: all 0.3s;
 		-o-transition: all 0.3s;
 		margin: 0 auto 10px;
-		text-transform: uppercase;
+		/*text-transform: uppercase;*/
 	}
 
 	.contact-form-main textarea{
