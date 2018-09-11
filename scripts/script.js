@@ -238,11 +238,11 @@
 		}
 
 		if($('body').hasClass('property-page')){
-			$(".property-entry-title").paroller({ factor: -1, factorXs: -0.2, type: 'foreground', direction: 'horizontal' });
+			// $(".property-entry-title").paroller({ factor: -1, factorXs: -0.2, type: 'foreground', direction: 'horizontal' });
 
-			$(".property-desc").paroller({ factor: 1, factorXs: 0.2, type: 'foreground', direction: 'horizontal' });
+			// $(".property-desc").paroller({ factor: 1, factorXs: 0.2, type: 'foreground', direction: 'horizontal' });
 
-			$(".property-slogan").paroller({ factor: 1, factorXs: 0.2, type: 'foreground', direction: 'vertical' });
+			// $(".property-slogan").paroller({ factor: 1, factorXs: 0.2, type: 'foreground', direction: 'vertical' });
 
 			
 		}
