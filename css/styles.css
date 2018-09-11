@@ -183,7 +183,7 @@ body{
 .header-wrap{
 	min-height: 90px;
 	background: #001844;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
