@@ -2007,13 +2007,19 @@ INNER PAGES
 		margin-bottom: 100px;
 	}
 
+	.facilities-desc{
+		background: url(../images/facilities-item-photo-3.jpg) no-repeat center / cover;
+		height: 350px;
+	}
+
 	.facilities-sub-desc{
 		position: absolute;
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		height: 95px;
+		height: calc(100% - 350px);
 		background: #b1c5e2;
+		background: url(../images/facilities-item-photo-4.jpg) no-repeat center / cover;
 	}
 
 	
