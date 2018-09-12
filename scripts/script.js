@@ -48,7 +48,10 @@
 	$(document).ready( function() {
 		app.init();
 
-		
+		$('.mobile-menu').click(function(e){
+			e.preventDefault();
+	        $('.mobile-nav-wrap').slideToggle("slow");
+	    });
 
 		$('.arrow-down-icon').click(function(){ 
 		    $("html, body").animate({ 

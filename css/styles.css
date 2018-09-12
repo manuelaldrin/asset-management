@@ -388,7 +388,7 @@ body{
 
 	.slideshow-content{
 		position: absolute;
-		/*left: 0;*/
+		left: 0;
 		top: 36%;
 		width: 100%;
 		text-align: 	center;	
@@ -418,6 +418,9 @@ body{
 		max-width: 600px;
 		margin: 54px auto 0;
 		color: #fff;
+		width: 100%;
+    	display: block;
+    	padding: 0 15px;
 		/* letter-spacing: 2px; */
 	}
 
@@ -480,9 +483,12 @@ body{
 		background: url(../images/fm-bg.jpg) no-repeat bottom / cover;
 	}
 
-	.cta-link{
-		color: #fff;
-		font-size: 0;
+	.cta-link {
+	    color: #fff;
+	    font-size: 0;
+	    display: block;
+	    max-width: 390px;
+	    margin: auto;
 	}
 
 	.cta-label{
@@ -596,8 +602,6 @@ body{
 		font-family: 'Lato', sans-serif;
 		text-transform: uppercase;
 		font-weight: 900;
-		display: inline-block;
-		vertical-align: bottom;
 		line-height: 1;
 		position: relative;
 		margin-bottom: 27px;
@@ -607,12 +611,18 @@ body{
 		font-style: normal;
 		font-size: 44px;
 		color: #dcdcdc;
+		display: inline-block;
+		vertical-align: top;
+		width: 80px;
 	}
 
 	.services-item-label span{
 		font-size: 22px;
 		color: #1a3865;
-		padding-left: 35px;
+		display: inline-block;
+		vertical-align: top;
+		width: calc(99% - 80px);
+		margin-top: 20px;
 	}
 
 	.services-item-desc {
@@ -650,6 +660,10 @@ body{
 
 	.services-item-img div:nth-child(odd){
 		margin-right: 15px;
+	}
+
+	.services-item-img img{
+		opacity: 0;
 	}
 
 	.services-item-img-1a{
@@ -2042,12 +2056,68 @@ INNER PAGES
 	    margin-bottom: 30px;
 	}
 
-	
 
-		
 	
-	
+.mobile-header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: #fff;
+	font-size: 0;
+	display: none;
+	z-index: 1040;
+	box-shadow: 0px -4px 19px rgba(0, 0, 0, 0.35);
+}
 
+	.mobile-field{
+		display: inline-block;
+		vertical-align: top;
+		width:33.33333%;
+		height: 50px;
+		text-align: center;
+	}
+
+	.mobile-field-email{
+		border-left: 1px solid #f9f9f9;
+		border-right: 1px solid #f9f9f9;
+	}
+
+	.mobile-field a{
+		display: block;
+		height: 100%;
+		color: #1043a2;
+	}
+
+	.mobile-field i{
+		font-size: 23px;
+		display: inline-block;
+		line-height: 50px;
+	}
+
+	.mobile-nav-wrap{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background: #fff;
+		z-index: 1035;
+		padding-top: 50px;
+		text-align: center;
+		display: none;
+	}
+
+	.mobile-nav .menu li{
+
+	}
+
+	.mobile-nav .menu li a{
+		font-size: 15px;
+		display: block;
+		color: #1043a2;
+		padding: 10px 0;
+		border-top: 1px solid #fdfdfd;
+	}
 
 /****************************************
 MEDIA QUERIES
@@ -2055,12 +2125,116 @@ MEDIA QUERIES
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px) {
-
+	.newsletter-label {
+	    font-size: 16px;
+	}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px) {
+	.header-wrap{
+		padding-top: 80px;
+	}
 
+	.mobile-header{
+		display: block;
+	}
+
+	.header-nav-wrap{
+		display: none;
+	}
+
+	.header-contact {
+	    text-align: center;
+	}
+
+	.hc-field{
+		display: block;
+		margin-left: 0;
+		margin-top: 10px;
+	}
+
+	.hc-tel,
+	.hc-email{
+		display: none;
+	}
+
+	.slideshow-wrap {
+	    height: 720px;
+	}
+
+	.slideshow-content{
+		top: 52%;
+	}
+
+	.slideshow-item{
+		background-attachment: scroll !important; 
+	}
+
+	.cta-photo {
+    	height: 485px;
+	}
+
+	.services-item-img-1a,
+	.services-item-img-2a,
+	.services-item-img-3a{
+		width: 56% !important;
+	}
+
+	.services-item-img-1b,
+	.services-item-img-2b,
+	.services-item-img-3b{
+		width: 33% !important;
+	}
+
+	.header-logo {
+	    margin: auto;
+	}
+
+	.title {
+    	font-size: 50px;
+	}
+
+	.cta-col {
+	    margin-top: 15px;
+	}
+
+	.cta-row{
+		margin: 0;
+	}
+
+
+	.contact-container{
+		padding: 0 15px;
+	}
+
+	.services-item-img div{
+		height: auto;
+	}
+
+	.services-item-img img{
+		opacity: 1;
+	}
+
+	.blockContactFormCol1, .blockContactFormCol2 {
+	    width: 100% !important;
+	    padding: 0 15px;
+	}
+
+	.n-field{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.newsletter-main input{
+		width: 100% !important;
+		margin: 0 0 10px;
+	}
+
+	.footer-nav .menu li {
+	    display: block;
+	}
 }
 
 /* Small Devices, Tablets */
@@ -2069,12 +2243,25 @@ MEDIA QUERIES
 }
 
 @media only screen and (max-width : 576px) {
+	.services-item-desc{
+		margin-left: 0;
+	}
+
+	.services-item-wrap{
+		padding: 50px 45px 70px;
+	}
+
+	.title {
+	    font-size: 38px;
+	}
 
 }
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
-
+	.services-item-label span {
+	    font-size: 18px;
+	}
 }
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width : 320px) {
