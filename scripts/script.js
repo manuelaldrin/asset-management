@@ -146,97 +146,99 @@
 			$('.video-main video').css({'opacity':'1'});
 			
 
-			
+			if($(window).width() < 992){
+				$.scrollify.destroy();
+			} else {
 
-			$.scrollify({
-				section : ".section",
-				// sectionName : "section-name",
-				interstitialSection : "footer",
-				easing: "easeOutExpo",
-				scrollSpeed: 800,
-				offset : 0,
-				scrollbars: true,
-				standardScrollElements: "",
-				setHeights: true,
-				overflowScroll: true,
-				updateHash: true,
-				touchScroll:true,
-				before:function(i,panels) {
-					$('body').find('.active-section').removeClass('active-section');
-					$.scrollify.current().addClass('active-section');
-					setTimeout(function(){
-						$('.active-section .section-text-bg').css({'height':'100%'});
-					},1000);
-					
-					if($('.resi-section-infographics').hasClass('active-section')){
+				$.scrollify({
+					section : ".section",
+					// sectionName : "section-name",
+					interstitialSection : "footer",
+					easing: "easeOutExpo",
+					scrollSpeed: 800,
+					offset : 0,
+					scrollbars: true,
+					standardScrollElements: "",
+					setHeights: true,
+					overflowScroll: true,
+					updateHash: true,
+					touchScroll:true,
+					before:function(i,panels) {
+						$('body').find('.active-section').removeClass('active-section');
+						$.scrollify.current().addClass('active-section');
 						setTimeout(function(){
-							$('.inforgraphics-item-1 .infographics-border').css({'opacity':'1'});
-							$('.inforgraphics-item-1 .counter').counterUp({
-								delay: 10,
-								time: 1000
-							});
-						},500);
-
-						setTimeout(function(){
-							$('.inforgraphics-item-2 .infographics-border').css({'opacity':'1'});
-							$('.inforgraphics-item-2 .counter').counterUp({
-								delay: 10,
-								time: 1000
-							});
+							$('.active-section .section-text-bg').css({'height':'100%'});
 						},1000);
+						
+						if($('.resi-section-infographics').hasClass('active-section')){
+							setTimeout(function(){
+								$('.inforgraphics-item-1 .infographics-border').css({'opacity':'1'});
+								$('.inforgraphics-item-1 .counter').counterUp({
+									delay: 10,
+									time: 1000
+								});
+							},500);
 
-						setTimeout(function(){
-							$('.inforgraphics-item-3 .infographics-border').css({'opacity':'1'});
-							$('.inforgraphics-item-3 .counter').counterUp({
-								delay: 10,
-								time: 1000
-							});
-						},1500);
+							setTimeout(function(){
+								$('.inforgraphics-item-2 .infographics-border').css({'opacity':'1'});
+								$('.inforgraphics-item-2 .counter').counterUp({
+									delay: 10,
+									time: 1000
+								});
+							},1000);
 
-					}else{
-						$('.infographics-border').css({'opacity':'0'});
+							setTimeout(function(){
+								$('.inforgraphics-item-3 .infographics-border').css({'opacity':'1'});
+								$('.inforgraphics-item-3 .counter').counterUp({
+									delay: 10,
+									time: 1000
+								});
+							},1500);
+
+						}else{
+							$('.infographics-border').css({'opacity':'0'});
+						}
+
+						var ref = panels[i].attr("data-section-name");
+
+					      $(".resi-pagination .active").removeClass("active");
+
+					      $(".resi-pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+
+					},
+					after:function() {
+						
+					},
+					afterResize:function() {},
+					afterRender:function() {
+					var pagination = "<ul class=\"resi-pagination\">";
+				    var activeClass = "";
+				    $(".section").each(function(i) {
+				        activeClass = "";
+				        if(i===0) {
+				          activeClass = "active";
+				        }
+				        pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+				    });
+
+				    pagination += "</ul>";
+
+				    $(".main").append(pagination);
+				      /*
+
+				      Tip: The two click events below are the same:
+
+				      $(".pagination a").on("click",function() {
+				        $.scrollify.move($(this).attr("href"));
+				      });
+
+				      */
+				    $(".resi-pagination a").on("click",$.scrollify.move);
+
 					}
+				});
 
-					var ref = panels[i].attr("data-section-name");
-
-				      $(".resi-pagination .active").removeClass("active");
-
-				      $(".resi-pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
-
-				},
-				after:function() {
-					
-				},
-				afterResize:function() {},
-				afterRender:function() {
-				var pagination = "<ul class=\"resi-pagination\">";
-			    var activeClass = "";
-			    $(".section").each(function(i) {
-			        activeClass = "";
-			        if(i===0) {
-			          activeClass = "active";
-			        }
-			        pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
-			    });
-
-			    pagination += "</ul>";
-
-			    $(".main").append(pagination);
-			      /*
-
-			      Tip: The two click events below are the same:
-
-			      $(".pagination a").on("click",function() {
-			        $.scrollify.move($(this).attr("href"));
-			      });
-
-			      */
-			    $(".resi-pagination a").on("click",$.scrollify.move);
-
-				}
-			});
-
-
+			}
 
 		}
 

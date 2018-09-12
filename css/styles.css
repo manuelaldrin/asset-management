@@ -1368,6 +1368,7 @@ INNER PAGES
 	.section-text-bg{
 		width: 50%;
 		height: 0%;
+		padding: 15px;
 		transition: all 0.8s;
 		-webkit-transition: all 0.8s;
 		-moz-transition: all 0.8s;
@@ -1473,6 +1474,10 @@ INNER PAGES
 	.infographics-border{
 		border: 1px solid #707070;
 		min-height: 400px;
+		display: block;
+		max-width: 360px;
+		width: 100%;
+		margin:  15px auto;
 		text-align: center;
 		opacity: 0;
 		transition: all 0.3s;
@@ -1533,6 +1538,7 @@ INNER PAGES
 		text-align: center;
 		line-height: 54px;
 		margin-right: 11px;
+		margin-bottom: 10px;
 		cursor: pointer;
 		transition: all 0.3s;
 		-webkit-transition: all 0.3s;
@@ -2128,6 +2134,24 @@ MEDIA QUERIES
 	.newsletter-label {
 	    font-size: 16px;
 	}
+
+	.resi-cta-bg{
+		margin-left: 0;
+	}
+
+	.section-text-bg.section-text-bg-2 .resi-cta-bg {
+	    margin-left: auto;
+	    margin-right: 0;
+	    right: 15px;
+	}
+
+	.property-offers-col{
+		padding: 135px 15px 15px;
+	}
+
+	.property-main-wrap{
+		bottom: 0;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -2235,6 +2259,63 @@ MEDIA QUERIES
 	.footer-nav .menu li {
 	    display: block;
 	}
+
+	/*Resi*/
+	.residential-page .header-logo {
+    	visibility: visible;
+	}
+
+	.resi-logo{
+		visibility: hidden;
+	}
+
+	.resi-section-1-wrap{
+		min-height: 545px;
+	}
+
+	.resi-cta-bg{
+		position: relative;
+	}
+
+	.section-text-bg{
+		width: 100%;
+	}
+
+	.section-text-bg.section-text-bg-2 .resi-cta-bg{
+		right: 0;
+	}
+
+	.infographics-border{
+		opacity: 1;
+		padding-top: 85px;
+	}
+
+	.info-number {
+    	font-size: 50px;
+	}
+
+	.infographics-border{
+		min-height: 270px;
+	}
+
+	.resi-pagination-wrap{
+		display: none;
+	}
+
+	.property-banner,
+	.facilities-banner{
+		height: auto;
+		padding-top: 280px;
+	}
+
+	.property-main-wrap{
+		position: relative;
+
+	}
+
+	.property-offers-row{
+		margin: 0;
+	}
 }
 
 /* Small Devices, Tablets */
@@ -2243,7 +2324,8 @@ MEDIA QUERIES
 }
 
 @media only screen and (max-width : 576px) {
-	.services-item-desc{
+	.services-item-desc,
+	.property-offers-desc p{
 		margin-left: 0;
 	}
 
