@@ -1237,13 +1237,13 @@ INNER PAGES
 	}
 
 	.resi-section-1-text {
-		color: #fff;
+		color: #000;
 		font-family: 'Montserrat', sans-serif;
 		max-width: 630px;
 		font-size: 20px;
 		text-align: right;
 		margin-left: auto;
-		text-shadow: 1px 1px 0 #000;
+		/*text-shadow: 1px 1px 0 #000;*/
 	}
 
 	.resi-section-1-text p{
