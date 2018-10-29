@@ -1668,7 +1668,7 @@ INNER PAGES
 	.scroll-down-wrap{
 		position: fixed;
 		right: 10px;
-		bottom: 20%;
+		bottom: 60px;
 		z-index: 2000;
 		-webkit-animation: ScrollDown 1s linear infinite alternate;
     	animation: ScrollDown 1s linear infinite alternate;
