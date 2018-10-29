@@ -1124,10 +1124,10 @@ INNER PAGES
 
 	/* Resi Banner */
 	.resi-banner{
-		height: 645px;
+		height: 800px;
 		position: relative;
 		/* background: #e8e8e8; */
-		background: #abc8ce url(../images/apartment-bed-bedroom-banner3.jpg) no-repeat center / cover fixed;
+		background: #abc8ce url(../images/vinicius-amano.jpg) no-repeat center bottom/ cover fixed;
 		text-align: center;
 		padding-top:  290px;
 		overflow: hidden;
@@ -1142,7 +1142,7 @@ INNER PAGES
 		height: 100%;
 		background: rgba(0,0,0,0.2);
 	}*/
-	.resi-banner::after {
+	/*.resi-banner::after {
 	    content: '';
 	    position: absolute;
 	    left: 0;
@@ -1153,7 +1153,7 @@ INNER PAGES
 	    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
 	    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
 	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-	}
+	}*/
 
 	.resi-logo{
 		max-width: 143px;
@@ -1175,27 +1175,29 @@ INNER PAGES
 		margin: 32px 0 5px;
 	    line-height: 1;
 	    text-transform: uppercase;
-	    font-family: 'Italiana', serif;
-	    color: #001844;
+	    font-family: 'Montserrat', sans-serif;
+	    color: #ffffff;
 	    font-size: 43px;
 	    letter-spacing: 1px;
+	    text-shadow: 1px 1px 20px #000;
 	}
 
 	.resi-label span{
 		display: block;
-		font-family: 'Montserrat', sans-serif;
-		color: #e88370;
-		text-transform: uppercase;
-		font-weight: 700;
-		font-size: 11px;
-		letter-spacing: 1px;
+	    font-family: 'Montserrat', sans-serif;
+	    color: #ffffff;
+	    text-transform: uppercase;
+	    font-weight: 700;
+	    font-size: 11px;
+	    letter-spacing: 1px;
+	    text-shadow: 1px 1px 8px #000;
 	}
 
 	.arrow-down-icon{
 		height: 40px;
 		width: 40px;
 		border-radius: 50%;
-		border: 1px solid #f1988e;
+		border: 1px solid #dedede;
 		display: block;
 		margin: auto;
 		position: relative;
@@ -1213,7 +1215,7 @@ INNER PAGES
 		background: url(../images/down-arrow-white.png) no-repeat center / contain;
 		transform: scale(0.6);
 		transform-origin: center;
-		opacity: 0.5;
+		opacity: 1;
     	filter: invert(100%);
     	-webkit-filter: invert(100%);
     	-moz-filter: invert(100%);
@@ -1235,7 +1237,7 @@ INNER PAGES
 		top: 50%;
 		width: 30%;
 		height: 1px;
-		background: #f5a297;
+		background: #dedede;
 	}
 
 	.resi-down-arrow::after{
@@ -1245,7 +1247,7 @@ INNER PAGES
 		top: 50%;
 		width: 30%;
 		height: 1px;
-		background: #f5a297;
+		background: #dedede;
 	}
 
 	.section{
@@ -1256,7 +1258,7 @@ INNER PAGES
 	/* Resi Section 1 */
 	.resi-section-1-wrap {
 	    position: relative;
-	    padding: 60px 0 40px;
+	    padding: 100px 0 90px;
 	    background: #fff;
 	}
 
@@ -1275,7 +1277,7 @@ INNER PAGES
 
 	.resi-section-1-text h2{
 		margin: 0 0 40px;
-		color: #ea6962;
+		color: #001844;
 	}
 
 	/* Resi Section 2 */
@@ -1482,6 +1484,7 @@ INNER PAGES
 		max-width: 410px;
 		width: 100%;
 		display: block;
+     	border-radius: 10px;
 	}
 
 	.resi-cta-border {
@@ -1490,6 +1493,7 @@ INNER PAGES
 		text-align: center;
 		color: #fff;
 		padding: 15px 25px;
+		border-radius: 10px;
 	}
 
 	.resi-cta-label {
