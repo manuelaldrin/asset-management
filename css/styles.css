@@ -1499,12 +1499,20 @@ INNER PAGES
 	.resi-cta-label {
 		margin: 20px 0 0;
 		font-size: 22px;
-		font-family: 'Italiana', serif;
+		/*font-family: 'Italiana', serif;*/
+		font-family: 'Montserrat', sans-serif;
 		line-height: 1;
 		text-transform: uppercase;
 		position: relative;
+		letter-spacing: 1px;
 		/*padding-bottom: 26px;
 		margin-bottom: 17px;*/
+	}
+
+	.resi-cta-desc {
+	    font-size: 15px;
+	    line-height: 1.2;
+	    margin: 10px 0 0;
 	}
 
 	/*.resi-cta-label::after{
@@ -1520,12 +1528,7 @@ INNER PAGES
 	}*/
 
 	.resi-services-item img{
-		margin: 30px auto 0;
-	}
-
-	.resi-cta-border p{
-		font-size: 13px;
-		margin-bottom: 20px;
+		margin: 7px auto 0;
 	}
 
 	.resi-cta-border p:last-child{
